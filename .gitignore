@@ -1,0 +1,37 @@
+
+# ======================================
+# Node.js dependencies
+# ======================================
+node_modules/
+
+# ======================================
+# Playwright reports and test artifacts
+# ======================================
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
+# ======================================
+# Environment configuration and secrets
+# ======================================
+.env
+.env.*
+!.env.example
+
+# ======================================
+# Future Python automation
+# ======================================
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+
+# ======================================
+# Miscellaneous generated files
+# ======================================
+*.log
+coverage/
+.DS_Store
