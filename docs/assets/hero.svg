@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="530" viewBox="0 0 1600 530">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#080D1C"/><stop offset="55%" stop-color="#0F1832"/><stop offset="100%" stop-color="#10163B"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0%" stop-color="#3989FF" stop-opacity="0.24"/><stop offset="100%" stop-color="#3989FF" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glow2"><stop offset="0%" stop-color="#19E6C8" stop-opacity="0.13"/><stop offset="100%" stop-color="#19E6C8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4AA6FF"/><stop offset="100%" stop-color="#28E4C4"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#182641"/><stop offset="100%" stop-color="#131A31"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-30%" width="150%" height="170%"><feGaussianBlur stdDeviation="16"/></filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 L 0 0 0 32" fill="none" stroke="#587096" stroke-opacity="0.10" stroke-width="1"/></pattern>
+  <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+<rect width="1600" height="530" fill="url(#bg)"/>
+<rect width="1600" height="530" fill="url(#grid)"/>
+<circle cx="1220" cy="90" r="450" fill="url(#glow)"/>
+<circle cx="550" cy="520" r="420" fill="url(#glow2)"/>
+<path d="M0 1 H1600" stroke="#233859"/>
+<path d="M0 529 H1600" stroke="#233859"/>
+<!-- Brand lockup -->
+<rect x="89" y="80" width="38" height="38" rx="11" fill="#1B3350" stroke="#39D6CD" stroke-opacity="0.5"/>
+<path d="M99 99 l8 8 12 -16" stroke="#49E6CD" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+<text x="141" y="105" font-family="Inter,DejaVu Sans,sans-serif" font-size="20" font-weight="600" letter-spacing="3.6" fill="#C8DCF3">QA ENGINEERING / PORTFOLIO</text>
+<text x="86" y="233" font-family="Inter Display,Inter,DejaVu Sans,sans-serif" font-size="102" font-weight="800" letter-spacing="-2" fill="#FFFFFF">TESTYARD</text>
+<text x="89" y="292" font-family="Inter,DejaVu Sans,sans-serif" font-size="43" font-weight="700" letter-spacing="1" fill="url(#accent)">SDET AUTOMATION LAB</text>
+<text x="89" y="347" font-family="Inter,DejaVu Sans,sans-serif" font-size="23" fill="#A8BED8">From user journeys to trustworthy test evidence.</text>
+<rect x="90" y="388" width="201" height="39" rx="19.5" fill="#172B44" stroke="#2B4365"/>
+<circle cx="111" cy="407" r="5.5" fill="#42DFAF"/>
+<text x="127" y="413" font-family="Inter,DejaVu Sans,sans-serif" font-size="15" font-weight="600" fill="#D8E6F6">PLAYWRIGHT + TS</text>
+<rect x="307" y="388" width="185" height="39" rx="19.5" fill="#172B44" stroke="#2B4365"/>
+<circle cx="328" cy="407" r="5.5" fill="#57B7FF"/>
+<text x="344" y="413" font-family="Inter,DejaVu Sans,sans-serif" font-size="15" font-weight="600" fill="#D8E6F6">REAL E2E FLOWS</text>
+<rect x="509" y="388" width="187" height="39" rx="19.5" fill="#172B44" stroke="#2B4365"/>
+<circle cx="530" cy="407" r="5.5" fill="#C59BFF"/>
+<text x="545" y="413" font-family="Inter,DejaVu Sans,sans-serif" font-size="15" font-weight="600" fill="#D8E6F6">CI IN PROGRESS</text>
+<!-- Right stack -->
+<rect x="924" y="118" width="532" height="302" rx="25" fill="#000000" opacity="0.26" filter="url(#shadow)"/>
+<g transform="translate(910 105)">
+<rect width="546" height="316" rx="22" fill="url(#panel)" stroke="#3F5378" stroke-width="2"/>
+<path d="M0 54 H546" stroke="#334766"/>
+<circle cx="31" cy="27" r="7" fill="#FA7A8B"/><circle cx="55" cy="27" r="7" fill="#FFC36E"/><circle cx="79" cy="27" r="7" fill="#4ED6AC"/>
+<rect x="126" y="17" width="301" height="20" rx="10" fill="#243650"/>
+<circle cx="147" cy="27" r="5" fill="#43D4BF"/>
+<text x="163" y="32" font-family="Inter,DejaVu Sans,sans-serif" font-size="11.7" fill="#AEC5E0">testyard / automation run</text>
+<!-- left nav -->
+<rect x="22" y="79" width="116" height="208" rx="11" fill="#101A2D"/>
+<rect x="35" y="96" width="87" height="12" rx="6" fill="#3F5A79"/>
+<rect x="35" y="125" width="85" height="28" rx="8" fill="#1C3D50" stroke="#2D6E7B"/>
+<circle cx="49" cy="139" r="4" fill="#46E0C2"/><rect x="61" y="135" width="48" height="7" rx="3.5" fill="#80D7D7"/>
+<rect x="35" y="169" width="72" height="8" rx="4" fill="#334A68"/>
+<rect x="35" y="192" width="81" height="8" rx="4" fill="#334A68"/>
+<rect x="35" y="215" width="62" height="8" rx="4" fill="#334A68"/>
+<rect x="35" y="238" width="75" height="8" rx="4" fill="#334A68"/>
+<!-- main UI -->
+<text x="162" y="102" font-family="Inter,DejaVu Sans,sans-serif" font-size="16" font-weight="700" fill="#F5FAFF">AUTHENTICATION JOURNEY</text>
+<text x="162" y="123" font-family="Inter,DejaVu Sans,sans-serif" font-size="10.5" fill="#8FAACB">Executed steps / assertions / outcomes</text>
+<rect x="161" y="143" width="360" height="40" rx="10" fill="#1B2943" stroke="#334D6B"/>
+<circle cx="180" cy="163" r="10" fill="#173D3D"/><path d="M175 163 l4 4 6 -8" fill="none" stroke="#3CE0B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="199" y="168" font-family="Inter,DejaVu Sans,sans-serif" font-size="13" fill="#E5F2FF">Sign in with valid credentials</text>
+<rect x="161" y="191" width="360" height="40" rx="10" fill="#1B2943" stroke="#334D6B"/>
+<circle cx="180" cy="211" r="10" fill="#173D3D"/><path d="M175 211 l4 4 6 -8" fill="none" stroke="#3CE0B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="199" y="216" font-family="Inter,DejaVu Sans,sans-serif" font-size="13" fill="#E5F2FF">Assert authenticated profile</text>
+<rect x="161" y="239" width="360" height="40" rx="10" fill="#1B2943" stroke="#334D6B"/>
+<circle cx="180" cy="259" r="10" fill="#173D3D"/><path d="M175 259 l4 4 6 -8" fill="none" stroke="#3CE0B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="199" y="264" font-family="Inter,DejaVu Sans,sans-serif" font-size="13" fill="#E5F2FF">Sign out and verify session UI</text>
+</g>
+<!-- floating chip -->
+<rect x="1150" y="378" width="310" height="70" rx="15" fill="#132D3C" stroke="#2BBDAA" stroke-opacity="0.8"/>
+<circle cx="1185" cy="413" r="17" fill="#1A594E"/>
+<path d="M1177 413 l6 6 10 -13" fill="none" stroke="#54F3CC" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1214" y="406" font-family="Inter,DejaVu Sans,sans-serif" font-size="13" font-weight="700" fill="#E8FFF9">VERIFIED LOCALLY</text>
+<text x="1214" y="425" font-family="Inter,DejaVu Sans,sans-serif" font-size="13" fill="#A9DCD3">Chromium · Login &amp; logout</text>
+<text x="91" y="484" font-family="Inter,DejaVu Sans,sans-serif" font-size="14.5" font-weight="500" letter-spacing="2.1" fill="#6D8AAA">DESIGN  •  AUTOMATE  •  VALIDATE  •  SHIP</text>
+</svg>
