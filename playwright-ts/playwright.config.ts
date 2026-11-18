@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import { env } from 'node:process';
 
+const isCI = Boolean(env.CI);
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -22,19 +24,27 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+  ['list'],
+  ['html', { open: 'never' }],
+],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    headless: false,
+    // Capture traces on the first retry of a failed test.
+  trace: 'on-first-retry',
 
-    launchOptions: {
-      slowMo: 1000,
-    },
+  // CI runs headlessly; local execution remains headed.
+  headless: Boolean(process.env.CI),
+
+  // Slow down actions locally for learning and debugging.
+  // Disable artificial delays in CI.
+  launchOptions: {
+    slowMo: process.env.CI ? 0 : 1000,
+  },
   },
 
   /* Configure projects for major browsers */
