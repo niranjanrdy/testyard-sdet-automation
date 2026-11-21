@@ -9,7 +9,7 @@
 [![Playwright](https://img.shields.io/badge/Playwright-1.65.1-44C18D?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Test%20Suite-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-26.x-43853D?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%20Setup%20In%20Progress-5066B8?style=for-the-badge&logo=githubactions&logoColor=white)](#ci--cross-browser-strategy)
+[![GitHub Actions](https://img.shields.io/badge/[![TestYard Playwright CI](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml)-5066B8?style=for-the-badge&logo=githubactions&logoColor=white)](#ci--cross-browser-strategy)
 
 **[Live practice app](https://testyard.onrender.com/practice/auth)** · **[Current test](playwright-ts/tests/auth.spec.ts)** · **[Quick start](#quick-start)** · **[Coverage](#test-coverage--execution-evidence)** · **[Architecture](#architecture--project-layout)** · **[Roadmap](#roadmap--release-milestones)**
 
@@ -70,7 +70,7 @@ The full test includes **logout and signed-out-state assertions**, grouped into 
 
 | Test ID | Scenario | Layer | Chromium local | Firefox / WebKit CI |
 | :--- | :--- | :--- | :---: | :---: |
-| `TC_AUTH_001` | Valid login → verify account email → logout → verify signed-out UI | UI E2E | ✅ Passed | 🟡 Pending |
+| `TC_AUTH_001` | Valid login → verify account email → logout → verify signed-out UI | UI E2E | ✅ Passed | ✅ Passed |
 | `TC_AUTH_002` | Invalid credentials and rejection message | UI negative | ⬜ | ⬜ |
 | `TC_AUTH_003` | Authentication input validation | UI negative | ⬜ | ⬜ |
 | `TC_NOTES_001` | Create → edit → complete → search → delete a note | UI E2E | ⬜ | ⬜ |
