@@ -9,7 +9,7 @@
 [![Playwright](https://img.shields.io/badge/Playwright-1.65.1-44C18D?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Test%20Suite-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-26.x-43853D?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![GitHub Actions](https://img.shields.io/badge/[![TestYard Playwright CI](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml)-5066B8?style=for-the-badge&logo=githubactions&logoColor=white)](#ci--cross-browser-strategy)
+[![TestYard Playwright CI](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/niranjanrdy/testyard-sdet-automation/actions/workflows/playwright.yml)
 
 **[Live practice app](https://testyard.onrender.com/practice/auth)** · **[Current test](playwright-ts/tests/auth.spec.ts)** · **[Quick start](#quick-start)** · **[Coverage](#test-coverage--execution-evidence)** · **[Architecture](#architecture--project-layout)** · **[Roadmap](#roadmap--release-milestones)**
 
@@ -27,12 +27,18 @@ The objective is to build an automation system that an engineer can **read, exec
 <tr>
 <td width="33%" align="center"><strong>01</strong><br><sub>Implemented UI journey</sub><br><strong>Login → Profile → Logout</strong></td>
 <td width="33%" align="center"><strong>Chromium</strong><br><sub>Locally executed</sub><br><strong>Passing</strong></td>
-<td width="33%" align="center"><strong>3 engines</strong><br><sub>Playwright projects configured</sub><br><strong>CI validation pending</strong></td>
+<td width="33%" align="center"><strong>3 engines</strong><br><sub>Playwright projects configured</sub><br><strong>3/3 CI tests passed</strong></td>
 </tr>
 </table>
 
 > [!IMPORTANT]
-> **Evidence over marketing:** Chromium authentication has passed locally. Firefox and WebKit are configured, but their local launches are blocked by Windows Code Integrity. GitHub Actions cross-browser results will be published here **after** a successful run—not before.
+> **Cross-browser CI verified:** The authentication test
+> (TC_AUTH_001) successfully passed on Chromium, Firefox,
+> and WebKit using GitHub Actions on Ubuntu 24.04.
+>
+> Firefox and WebKit remain blocked locally by Windows
+> Code Integrity policies, but both execute successfully
+> in our Linux-based CI environment.
 
 ## What this lab demonstrates
 
@@ -43,7 +49,7 @@ The objective is to build an automation system that an engineer can **read, exec
 | **Intentional locator design** | Actual DOM inspection; accessible role locators and stable `data-testid` attributes |
 | **Debugging and evidence** | Playwright Inspector, HTML reporting, traces on first CI retry |
 | **Execution engineering** | Locked npm dependencies, browser projects, CI-aware headless and retry settings |
-| **Cross-browser strategy** | Chromium locally; Firefox/WebKit validation planned on GitHub-hosted Ubuntu |
+| **Cross-browser strategy** | Chromium locally; Firefox/WebKit verified in GitHub Actions on GitHub-hosted Ubuntu |
 | **End-to-end + API strategy** | Notes lifecycle and authenticated REST checks in the next development phase |
 
 ### A look at the code, not just the badges
@@ -107,7 +113,7 @@ flowchart TD
     F --> G
     G --> H[UI assertions / test steps]
     H --> I[HTML report / traces]
-    J[GitHub Actions · planned verification] -.-> B
+    J[GitHub Actions · verified CI execution] -.-> B
     K[API checks · next phase] -.-> G
 ```
 
@@ -231,20 +237,17 @@ Keep the repository separate from a Python `.venv`; the Playwright TypeScript mo
 
 </div>
 
-**Next milestone:** Add and verify a GitHub Actions workflow on `ubuntu-24.04`. The job will execute from `playwright-ts/`, install Playwright browser dependencies, run the authentication test in all three browser projects, and upload the HTML report even when tests fail.
+**Next milestone:** CI is implemented a GitHub Actions workflow on `ubuntu-24.04`. The job will execute from `playwright-ts/`, install Playwright browser dependencies, run the authentication test in all three browser projects, and upload the HTML report even when tests fail.
 
 The framework already contains CI-aware settings:
 
-| Setting | Local development | CI (planned) |
+| Setting | Local development | CI (implemented) |
 | :--- | :--- | :--- |
 | Browser UI | Headed | Headless |
 | Action delay | 1,000 ms for learning | None |
 | Retries | 0 | 2 |
 | Workers | Playwright default | 1 |
 | Reporting | List + HTML | List + uploaded HTML artifact |
-
-> [!NOTE]
-> There is **no live CI success badge** yet. A real workflow link, run history, and cross-browser results will be added after the GitHub repository and runner are verified.
 
 ## Known environment limitations
 
